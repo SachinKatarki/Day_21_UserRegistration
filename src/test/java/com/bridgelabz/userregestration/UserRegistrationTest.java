@@ -83,5 +83,18 @@ public class UserRegistrationTest {
 	        boolean result = userRegistration.passwordRule3("Sachin");
 	        Assert.assertEquals(false, result);
 	    }
+	    @Test
+	    public void givenPasswordRule4_WhenInFormat_ShouldReturnTrue() {
+	        boolean result = userRegistration.passwordRule4("Sachin@21");
+	        Assert.assertEquals(true, result);
+	    }
+
+	    @Test
+	    public void givenPasswordRule4_WhenOurOfFormat_ShouldReturnFalse() {
+	        boolean result = userRegistration.passwordRule4("Sachin");
+	        Assert.assertEquals(false, result);
+	    }
+
+	    
 
     }
